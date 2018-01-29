@@ -63,9 +63,9 @@ namespace TeamExplorerPrune.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
-        internal static System.Drawing.Icon TeamExtensionGit {
+        internal static System.Drawing.Icon prunegit {
             get {
-                object obj = ResourceManager.GetObject("TeamExtensionGit", resourceCulture);
+                object obj = ResourceManager.GetObject("prunegit", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
             }
         }

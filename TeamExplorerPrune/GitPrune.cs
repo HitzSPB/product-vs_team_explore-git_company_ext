@@ -1,4 +1,11 @@
-﻿using System;
+﻿using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Runtime.CompilerServices;
+using EnvDTE;
+using Microsoft.VisualStudio;
+using Microsoft.VisualStudio.TeamFoundation.Git.Extensibility;
+using System;
 using System.ComponentModel;
 using System.ComponentModel.Composition;
 using System.Drawing;
@@ -6,13 +13,6 @@ using System.Resources;
 using System.Windows.Forms;
 using Microsoft.TeamFoundation.Controls;
 using Microsoft.VisualStudio.Shell;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using EnvDTE;
-using Microsoft.VisualStudio;
-using Microsoft.VisualStudio.TeamFoundation.Git.Extensibility;
 
 namespace TeamExplorerPrune
 {
@@ -20,8 +20,9 @@ namespace TeamExplorerPrune
 
     public class GitPrune : ITeamExplorerNavigationItem2
     {
+
         readonly ExecuteCommand _command = new ExecuteCommand();
-        //OutputWindow output = new OutputWindow();
+        OutputWindow output = new OutputWindow();
         private string _executeStringCommand;
         private string _path;
 
@@ -29,10 +30,10 @@ namespace TeamExplorerPrune
         public string Text => "GitPrune";
 
         //fix
-        public Image Image => null;
+        public Image Image => Properties.Resource.prunegit.ToBitmap();
         public bool IsEnabled => true;
-        public int ArgbColor => Color.GreenYellow.ToArgb();
-        public object Icon { get; }
+        public int ArgbColor => Color.Aqua.ToArgb();
+        public object Icon => Properties.Resource.prunegit.ToBitmap();
 
         [ImportingConstructor]
         public GitPrune()
@@ -55,7 +56,7 @@ namespace TeamExplorerPrune
             _executeStringCommand = "/c cd " + _path + "&git remote prune origin --dry-run";
             if (!string.IsNullOrWhiteSpace(_path))
             {
-                //MessageBox.Show(_command.Execute(_path));
+                MessageBox.Show(_command.Execute(_path));
             }
             else
             {
@@ -68,7 +69,7 @@ namespace TeamExplorerPrune
         public void Invalidate()
         {
             IsVisible = !String.IsNullOrWhiteSpace(GetActiveRepo()?.RepositoryPath);
-         //   output.WriteText("Current Button Status is ::" + IsVisible);
+            output.WriteText("Current Button Status is ::" + IsVisible);
             LogCalledMethod();
         }
 
@@ -104,7 +105,7 @@ namespace TeamExplorerPrune
         //Writes to Output Window foreach action
         private void LogCalledMethod([CallerMemberName] string method = null)
         {
-           // output.WriteText($"{method} called");
+            output.WriteText($"{method} called");
         }
 
     }
