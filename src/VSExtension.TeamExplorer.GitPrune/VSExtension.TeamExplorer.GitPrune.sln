@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29025.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VSExtension.TeamExplorer.GitPrune", "VSExtension.TeamExplorer.GitPrune\VSExtension.TeamExplorer.GitPrune.csproj", "{2FE176B8-4FF3-4CE0-8214-EFDB2556262D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2FE176B8-4FF3-4CE0-8214-EFDB2556262D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FE176B8-4FF3-4CE0-8214-EFDB2556262D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FE176B8-4FF3-4CE0-8214-EFDB2556262D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FE176B8-4FF3-4CE0-8214-EFDB2556262D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {91981744-ACEE-4CBE-8448-101B4974A45C}
+	EndGlobalSection
+EndGlobal

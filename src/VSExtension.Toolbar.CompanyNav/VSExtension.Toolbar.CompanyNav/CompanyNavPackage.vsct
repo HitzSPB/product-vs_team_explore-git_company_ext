@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <Extern href="stdidcmd.h"/>
+  <Extern href="vsshlids.h"/>
+  <Commands package="guidCompanyNavPackage">
+
+    <Menus>
+      <Menu guid="guidCompanyNavPackageCmdSet" id="TopLevelMenu" priority="0x700" type="Menu">
+        <Parent guid="guidSHLMainMenu"
+                id="IDG_VS_MM_TOOLSADDINS" />
+        <Strings>
+          <ButtonText>CompanyNav</ButtonText>
+          <CommandName>CompanyNav</CommandName>
+        </Strings>
+      </Menu>
+    </Menus>
+
+    <Groups>
+      <Group guid="guidCompanyNavPackageCmdSet" id="MyMenuGroup" priority="0x0600">
+        <Parent guid="guidCompanyNavPackageCmdSet" id="TopLevelMenu"/>
+      </Group>
+    </Groups>
+
+    <Buttons>
+      <Button guid="guidCompanyNavPackageCmdSet" id="CompanyNavId" priority="0x0100" type="Button">
+        <Parent guid="guidCompanyNavPackageCmdSet" id="MyMenuGroup" />
+        <Icon guid="guidImages" id="bmpPic1" />
+        <Strings>
+          <ButtonText>link1</ButtonText>
+        </Strings>
+      </Button>
+      
+      <Button guid="guidCompanyNavPackageCmdSet" id="CompanyNavId1" priority="0x0101" type="Button">
+        <Parent guid="guidCompanyNavPackageCmdSet" id="MyMenuGroup" />
+        <Icon guid="guidImages" id="bmpPic1" />
+        <Strings>
+          <ButtonText>link2</ButtonText>
+        </Strings>
+      </Button>
+      
+      <Button guid="guidCompanyNavPackageCmdSet" id="CompanyNavId2" priority="0x0102" type="Button">
+        <Parent guid="guidCompanyNavPackageCmdSet" id="MyMenuGroup" />
+        <Icon guid="guidImages" id="bmpPic1" />
+        <Strings>
+          <ButtonText>link3</ButtonText>
+        </Strings>
+      </Button>
+      
+      <Button guid="guidCompanyNavPackageCmdSet" id="CompanyNavId3" priority="0x0103" type="Button">
+        <Parent guid="guidCompanyNavPackageCmdSet" id="MyMenuGroup" />
+        <Icon guid="guidImages" id="bmpPic1" />
+        <Strings>
+          <ButtonText>link4</ButtonText>
+        </Strings>
+      </Button>
+      
+      <Button guid="guidCompanyNavPackageCmdSet" id="CompanyNavId4" priority="0x0104" type="Button">
+        <Parent guid="guidCompanyNavPackageCmdSet" id="MyMenuGroup" />
+        <Icon guid="guidImages" id="bmpPic1" />
+        <Strings>
+          <ButtonText>link5</ButtonText>
+        </Strings>
+      </Button>
+      
+      <Button guid="guidCompanyNavPackageCmdSet" id="CompanyNavId5" priority="0x0105" type="Button">
+        <Parent guid="guidCompanyNavPackageCmdSet" id="MyMenuGroup" />
+        <Icon guid="guidImages" id="bmpPic1" />
+        <Strings>
+          <ButtonText>link6</ButtonText>
+        </Strings>
+      </Button>
+      
+      <Button guid="guidCompanyNavPackageCmdSet" id="CompanyNavId6" priority="0x0106" type="Button">
+        <Parent guid="guidCompanyNavPackageCmdSet" id="MyMenuGroup" />
+        <Icon guid="guidImages" id="bmpPic1" />
+        <Strings>
+          <ButtonText>link7</ButtonText>
+        </Strings>
+      </Button>
+    </Buttons>
+
+    <Bitmaps>
+      <Bitmap guid="guidImages" href="Resources\CompanyNav.png" usedList="bmpPic1, bmpPic2, bmpPicSearch, bmpPicX, bmpPicArrows, bmpPicStrikethrough"/>
+    </Bitmaps>
+  </Commands>
+
+  <Symbols>
+    <GuidSymbol name="guidCompanyNavPackage" value="{5f04007e-9558-4faf-9580-b1de5675126a}" />
+
+    <GuidSymbol name="guidCompanyNavPackageCmdSet" value="{53ca7a15-26cd-4f1a-853d-3cfa0d5654c5}">
+      <IDSymbol name="TopLevelMenu" value="0x1021"/>
+      <IDSymbol name="MyMenuGroup" value="0x1020" />
+      <IDSymbol name="CompanyNavId" value="0x0100" />
+      <IDSymbol name="CompanyNavId1" value="0x0101" />
+      <IDSymbol name="CompanyNavId2" value="0x0102" />
+      <IDSymbol name="CompanyNavId3" value="0x0103" />
+      <IDSymbol name="CompanyNavId4" value="0x0104" />
+      <IDSymbol name="CompanyNavId5" value="0x0105" />
+      <IDSymbol name="CompanyNavId6" value="0x0106" />
+    </GuidSymbol>
+
+    <GuidSymbol name="guidImages" value="{2bcdbcff-2e15-4ef4-b240-c194c9dc88ac}" >
+      <IDSymbol name="bmpPic1" value="1" />
+      <IDSymbol name="bmpPic2" value="2" />
+      <IDSymbol name="bmpPicSearch" value="3" />
+      <IDSymbol name="bmpPicX" value="4" />
+      <IDSymbol name="bmpPicArrows" value="5" />
+      <IDSymbol name="bmpPicStrikethrough" value="6" />
+    </GuidSymbol>
+  </Symbols>
+</CommandTable>
